@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SudPay</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+  <!-- Login Screen -->
+  <div id="loginScreen" class="screen active">
+      <div class="login-box">
+          <h1>SudPay</h1>
+          <p>محفظتك الذكية</p>
+          <input type="tel" id="phoneInput" placeholder="أدخل رقم الهاتف">
+          <button onclick="login()">دخول</button>
+      </div>
+  </div>
+
+  <!-- Main App -->
+  <div id="mainScreen" class="screen">
+
+      <div class="header">
+          <div>
+              <h2>مرحباً</h2>
+              <p id="userPhone"></p>
+          </div>
+      </div>
+
+      <div class="balance-card">
+          <p>الرصيد الحالي</p>
+          <h1 id="balance">25,000 SDG</h1>
+      </div>
+
+      <div class="actions">
+          <div class="action" onclick="makePayment('تحويل أموال')">💸<span>تحويل</span></div>
+          <div class="action" onclick="makePayment('شراء كهرباء')">⚡<span>كهرباء</span></div>
+          <div class="action" onclick="makePayment('شراء رصيد')">📱<span>رصيد</span></div>
+          <div class="action" onclick="makePayment('تحويل لبنك')">🏦<span>تحويل بنك</span></div>
+          <div class="action" onclick="makePayment('محفظة')">👛<span>محفظة</span></div>
+          <div class="action" onclick="makePayment('QR')">🔍<span>QR</span></div>
+      </div>
+
+      <div class="banks">
+          <h3>البنوك والمحافظ</h3>
+          <div class="bank-list">
+              <span>بنكك</span>
+              <span>أوكاش</span>
+              <span>فوري</span>
+              <span>ساهل</span>
+              <span>ريتا باي</span>
+              <span>ماي كاشي</span>
+          </div>
+      </div>
+
+      <div class="transactions">
+          <h3>سجل العمليات</h3>
+          <ul id="transactionList"></ul>
+      </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+  </html>
